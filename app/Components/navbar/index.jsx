@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Link from "./Link";
-import { slideMenu } from "../header/variants";
+import { slideMenu } from "../Header/variants";
 import Curve from "./Curve";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -22,9 +22,10 @@ const navLinks = [
   },
 ];
 
-const index = () => {
+const Navbar = () => {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+  console.log(pathname);
   return (
     <motion.div
       variants={slideMenu}
@@ -55,7 +56,10 @@ const index = () => {
           })}
         </div>
         <div className={styles.footer}>
-          <a href="https://www.linkedin.com/in/gabriel-s-94a908236/">
+          <a
+            href="https://www.linkedin.com/in/gabriel-s-94a908236/"
+            target="_blank"
+          >
             LinkedIn
           </a>
           <a href="mailto:sirbugabriel97@gmail.com">Mail</a>
@@ -67,4 +71,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;

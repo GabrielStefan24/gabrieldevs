@@ -61,11 +61,54 @@
     }
   }
   .menu{
+    transform: scale(0);
     position: fixed;
     right: 0;
     width: 5rem;
     height: 5rem;
     margin: 1.5rem;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 3;
   }
+
+
+.header{
+  position: relative;
+}
+.navbar{
+  display: flex;
+  position: absolute;
+  gap: 2.5rem;
+  padding: 2rem 4rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+.el{
+  position: relative;
+  z-index: 4;
+  p{
+    color: white;
+    font-size: clamp(1rem,2.5vw,1.5rem);
+    cursor: pointer;
+   }
+   .indicator{
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    position: absolute;
+    top: 80%;
+    left:50%;
+    border-radius: 50%;
+    transform: scale(0) translateX(-50%);
+    transition : transform 0.2s cubic-bezier(0.75,0,0.24,1);
+
+  
+   }
+   &:hover{
+    .indicator{
+      transform: scale(1) translateX(-50%);
+    }
+  }
+
+
+}
