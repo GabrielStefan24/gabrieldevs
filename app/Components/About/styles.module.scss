@@ -1,18 +1,21 @@
 .description{
-    padding: 8rem 10rem 0 10rem ;
+   
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 10rem;
+    padding-left: calc(var(--container-padding) * 2);
+    padding-right:calc(var(--container-padding) * 2)  ;
 
-    @media(max-width:540px){
+    @media(max-width:840px){
         padding: 6rem 2rem 0 2rem;
     }
     .container{
         display: flex;
-        max-width: 1400px;
+        max-width: 130em;
+        margin:  0 auto;
         gap: 6rem;
         justify-content: space-between;
-
+        position: relative;
         @media(max-width : 540px) {
         flex-direction: column;
         gap: 4rem;
@@ -43,6 +46,27 @@
             font-weight: 300;
            
            }
+        }
+        .imageBox{
+            position: absolute;
+            top: 90%;
+            right: 5%;
+            width: 20%;
+            height: 20%;
+          
+            @media(max-width:540px){
+                top: 125%;
+                right: 50%;
+            }
+            .image{
+                border-radius: 50%;
+                width: calc(130px + 7vw); 
+                height: calc(130px + 7vw); 
+              
+                @media(min-width:768px){
+                
+                }
+            }
         }
     }
 }

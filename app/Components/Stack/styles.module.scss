@@ -1,0 +1,64 @@
+.container{
+  
+    max-width: 140em;
+    padding-left: var(--container-padding) ;
+    padding-right: var(--container-padding) ;
+    margin-top: 10rem;
+
+  
+    @media(max-width :540px){
+        padding: 6rem 2rem 0 2rem
+    }
+    .h3Container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .h3{
+        color:#626363 ;
+        padding-bottom: 2rem;
+        font-weight: 500;
+      
+       width: 100%;
+       text-align: center;
+        border-bottom: 1px solid rgb(201, 201, 201) ;
+       
+    }
+    .svgBox {
+        margin-top: 2rem;
+        width: 100%;
+       
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        gap: calc(var(--gap-padding));
+       
+      
+        @media(min-width: 1201px) {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(9, 1fr);
+        }
+    
+      
+        @media(min-width: 281px) and (max-width: 1200px) {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+     
+     
+    }
+    .svg{
+        width: calc(40px + 4vw);
+        height: calc(40px + 4vh);
+    }
+    .iconContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color:#626363 
+    }
+}

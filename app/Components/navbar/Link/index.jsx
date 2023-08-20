@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";

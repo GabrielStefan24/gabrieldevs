@@ -9,7 +9,7 @@ import Rounded from "../../common/Rounded";
 
 const projects = [
   {
-    title: "bff Tattoo Studio",
+    title: "bf Tattoo Studio",
     src: "HeroImage.webp",
     color: "#000000",
   },
@@ -104,7 +104,7 @@ export default function Home() {
   };
 
   return (
-    <main
+    <section
       onMouseMove={(e) => {
         moveItems(e.clientX, e.clientY);
       }}
@@ -122,9 +122,11 @@ export default function Home() {
           );
         })}
       </div>
-      <Rounded>
-        <p>More work</p>
-      </Rounded>
+      <div className={styles.btn}>
+        <Rounded>
+          <p>More work</p>
+        </Rounded>
+      </div>
       <>
         <motion.div
           ref={modalContainer}
@@ -168,6 +170,6 @@ export default function Home() {
           View
         </motion.div>
       </>
-    </main>
+    </section>
   );
 }

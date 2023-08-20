@@ -1,7 +1,10 @@
+"use client";
 import styles from "./styles.module.scss";
 import { motion, useInView } from "framer-motion";
 import { slideUp, opacity } from "./variants";
 import { useRef } from "react";
+import Image from "next/image";
+import Magnetic from "@/app/common/Magnetic";
 
 const About = () => {
   const container = useRef(null);
@@ -38,6 +41,17 @@ const About = () => {
           My passion for design and coding fuels my love for web interaction. I
           thoroughly enjoy both the design and coding aspects of web development
         </motion.p>
+        <Magnetic>
+          <div className={styles.imageBox} data-scroll data-scroll-speed={0.08}>
+            <Image
+              className={styles.image}
+              src="/Formal.webp"
+              width={1000}
+              height={1000}
+              alt="Picture of me"
+            />
+          </div>
+        </Magnetic>
       </div>
     </div>
   );

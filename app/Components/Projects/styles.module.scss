@@ -1,13 +1,15 @@
 .projects{
     display: flex;
-    align-items: center;
-    padding-left: 200px;
-    padding-right: 200px;
+   
+    max-width: 140em;
     flex-direction: column;
     margin-top: 300px;
+    
+    padding-left: var(--container-padding) ;
+    padding-right: var(--container-padding) ;
 
     .body{
-        max-width: 1400px;
+       
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -66,6 +68,12 @@
     .cursorLabel{
         background-color: transparent;
     }
+    .btn{
+        margin: 0 auto;
+        
+       
+    }
+  
     
     
 }
