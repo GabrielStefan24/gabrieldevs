@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import gsap from "gsap";
 import Magnetic from "../Magnetic";
 
-export default function index({
+export default function Rounded({
   children,
   backgroundColor = "#ec4e39",
   ...attributes

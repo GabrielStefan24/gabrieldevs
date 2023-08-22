@@ -1,7 +1,7 @@
 "use client";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import Rounded from "../../common/Rounded";
+import Rounded from '../../common/Rounded'
 
 export default function Contact() {
   return (
