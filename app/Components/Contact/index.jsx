@@ -1,9 +1,7 @@
 "use client";
 import styles from "./styles.module.scss";
-import { useState } from "react";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
-import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
@@ -24,11 +22,11 @@ export default function Contact() {
         <div className={styles.buttonRow}>
           <div className={styles.col}>
             <div className={styles.stripe}></div>
-            <motion.div className={styles.buttonContainer}>
+            <div className={styles.buttonContainer}>
               <Rounded backgroundColor={"#ec4e39"} className={styles.button}>
                 <a href="mailto:sirbugabriel97@gmail.com">Get in touch</a>
               </Rounded>
-            </motion.div>
+            </div>
           </div>
         </div>
 

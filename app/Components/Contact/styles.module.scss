@@ -14,7 +14,9 @@
     @media(max-width:1023px){
         height: 80vh;
     }
- 
+    @media(min-width:1921px){
+        height: 80vh;
+    }
     .container{
         max-width: 100em;
         margin:  0 auto;
@@ -124,7 +126,7 @@
            color: white;
            text-decoration: none; 
            z-index: 2;
-           font-size: clamp(1rem,2vw,2rem);
+           font-size: clamp(1rem,1.5vw,1.5rem);
            font-weight: 200;
          
         }
