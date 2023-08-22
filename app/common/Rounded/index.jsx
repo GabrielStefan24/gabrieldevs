@@ -1,9 +1,14 @@
+"use client";
 import { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
 import Magnetic from "../Magnetic";
 
-export default function index({ children, backgroundColor = "#ec4e39", ...attributes }) {
+export default function index({
+  children,
+  backgroundColor = "#ec4e39",
+  ...attributes
+}) {
   const circle = useRef(null);
   let timeline = useRef(null);
   let timeoutId = null;

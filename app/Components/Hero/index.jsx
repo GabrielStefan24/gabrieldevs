@@ -188,7 +188,7 @@ export default function Home() {
       <div className={styles.body}>
         <div className={styles.textBox}>
           <h1 className={styles.text}>
-            I'm <span className={styles.name}>Gabriel Sirbu</span>
+            I&apos;m <span className={styles.name}>Gabriel Sirbu</span>
             , Bucharest
             <br />
             based developer, crafting simple and <br />
@@ -208,7 +208,7 @@ export default function Home() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            Every <span className={styles.nameMask}>day's a coding</span>{" "}
+            Every <span className={styles.nameMask}>day&apos;s a coding</span>
             journey,
             <br />
             making the web a more engaging, useful <br /> place
