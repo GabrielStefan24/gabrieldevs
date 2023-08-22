@@ -5,7 +5,7 @@ import Project from "./project";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
-import Rounded from "../../../common/Rounded";
+import Rounded from "../../common/Rounded";
 
 const projects = [
   {

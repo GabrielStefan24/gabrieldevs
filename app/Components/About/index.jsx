@@ -9,7 +9,7 @@ import Magnetic from "@/app/common/Magnetic";
 const About = () => {
   const container = useRef(null);
   const isInView = useInView(container);
-  console.log(isInView);
+
 
   const phrase =
     "Hi, I'm Gabriel, a self-taught front-end web developer. Passionate about learning new technologies and pushing boundaries, I blend design and development to create optimal user experiences. ";

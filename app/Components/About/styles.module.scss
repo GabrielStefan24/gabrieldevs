@@ -11,7 +11,7 @@
     }
     .container{
         display: flex;
-        max-width: 130em;
+        max-width: 100em;
         margin:  0 auto;
         gap: 6rem;
         justify-content: space-between;
@@ -63,9 +63,7 @@
                 width: calc(130px + 7vw); 
                 height: calc(130px + 7vw); 
               
-                @media(min-width:768px){
-                
-                }
+               
             }
         }
     }

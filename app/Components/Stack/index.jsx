@@ -12,7 +12,7 @@ const Stack = () => {
     target: container,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
+  const height = useTransform(scrollYProgress, [0, 0.85], [50, 0]);
 
   return (
     <section ref={container} className={styles.container}>
