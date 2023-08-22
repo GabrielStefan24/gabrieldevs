@@ -59,7 +59,8 @@
     color: #afa18f;
     font-size: clamp(2rem,4vw,6rem);
     line-height: 1.5;
-    font-family: Avant Garde Book BT;
+    font-weight: 400;
+   font-family: 'DM Sans', sans-serif;
     span{
       color: white;
     }
@@ -67,10 +68,10 @@
       color: #ec4e39;
     }
   }.textMask{
-    
+    font-weight: 400;
     font-size: clamp(2rem,4vw,6rem);
     line-height: 1.5;
-    font-family: Avant Garde Book BT;
+   font-family: 'DM Sans', sans-serif;
   }
 
 }
