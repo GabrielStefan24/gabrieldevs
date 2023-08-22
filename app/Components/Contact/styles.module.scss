@@ -79,7 +79,8 @@
            }
         }
            .button{
-          
+            position: relative;
+            overflow: hidden;
             width:220px;
             height: 220px;
             background-color: #455CE9;
@@ -100,7 +101,7 @@
                 text-decoration: none;
                 color: white;
                 margin: 0px;
-                font-size: 16px;
+                font-size: clamp(1rem,2vw,1.5rem);
                 font-weight: 500;
                 z-index: 2;
                 position: relative;
@@ -119,7 +120,8 @@
             align-items: center;
             justify-content: center; 
             min-width: 15rem;
-            
+            position: relative;
+            overflow: hidden;
             padding: 2rem;
             border-radius: 3.125em;
           
