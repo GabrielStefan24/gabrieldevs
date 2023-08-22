@@ -1,4 +1,4 @@
-"use client";
+import React from "react";
 import { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
@@ -6,7 +6,7 @@ import Magnetic from "../Magnetic";
 
 export default function Rounded({
   children,
-  backgroundColor = "#ec4e39",
+  backgroundColor = "#455CE9",
   ...attributes
 }) {
   const circle = useRef(null);
