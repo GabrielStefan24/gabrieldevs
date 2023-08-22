@@ -10,8 +10,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
    
-    overflow-x: hidden;
+  
   }
 }
 :root{
@@ -24,5 +25,11 @@
   src: url('/fonts/Roslindale.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'Avant Garde Book BT';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/AVGARDD_2.woff') format('woff');
 }
 @import 'node_modules/locomotive-scroll/dist/locomotive-scroll';

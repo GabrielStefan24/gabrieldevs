@@ -1,14 +1,13 @@
 .landing{
     position: relative;
-    display: flex;
     height: 100vh;
     overflow: hidden;
     background-color: black;
-    justify-content: center;
-    align-items: center;
-    z-index: -2;
+   
+  
+   
    .lines{
-    z-index: -1;
+   
     width: 100%;
     position: absolute;
     top: 50%;
@@ -16,6 +15,7 @@
     bottom: auto;
     left: 50%;
     transform: translate(-50%,-50%);
+   
     .rotating{
     
       transform-origin: center;
@@ -27,27 +27,52 @@
     }
    
  }
- .textBox{
-  position: absolute;
-  width: 80%;
-  padding: 2rem;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
+ .body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
+ .textBox, .mask{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  }
+  .mask{
+    mask-image: url("../../../public/mask.svg");
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    background: #ec4e39;
+    position: absolute;
+    color: black;
+   
+   
+  }
   .text{
-    color: hsla(0,0%,100%,.32);
+    
+    color: #afa18f;
     font-size: clamp(2rem,4vw,6rem);
     line-height: 1.5;
-    font-family: Roslindale;
+    font-family: Avant Garde Book BT;
     span{
       color: white;
     }
+    .name{
+      color: #ec4e39;
+    }
+  }.textMask{
+    
+    font-size: clamp(2rem,4vw,6rem);
+    line-height: 1.5;
+    font-family: Avant Garde Book BT;
   }
- }
+
 }
 @keyframes rotation {
   0% {

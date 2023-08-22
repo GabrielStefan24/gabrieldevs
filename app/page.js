@@ -2,7 +2,7 @@
 import Hero from "./Components/Hero";
 import styles from "./page.module.css";
 import About from "./Components/About";
-import Projects from "./Components/Projects";
+import Projects from "./Components/navbar/Projects";
 import { useState, useEffect } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import Stack from "./Components/Stack";

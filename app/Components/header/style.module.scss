@@ -87,14 +87,15 @@
   position: relative;
   z-index: 4;
   p{
-    color: white;
+    color: #afa18f;
+    font-weight: 600; 
     font-size: clamp(1rem,2.5vw,1.5rem);
     cursor: pointer;
    }
    .indicator{
     width: 6px;
     height: 6px;
-    background-color: white;
+    background-color: #ec4e39;
     position: absolute;
     top: 80%;
     left:50%;

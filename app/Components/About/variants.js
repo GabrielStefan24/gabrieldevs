@@ -7,7 +7,7 @@ export const opacity = {
 
   open: {
     opacity: 1,
-    transition: { duration: 1.5 },
+    transition: { duration: 2.5 },
   },
   closed: {
     opacity: 0,

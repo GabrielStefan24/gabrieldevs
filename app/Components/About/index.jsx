@@ -46,8 +46,8 @@ const About = () => {
             <Image
               className={styles.image}
               src="/Formal.webp"
-              width={1000}
-              height={1000}
+              width={1920}
+              height={1080}
               alt="Picture of me"
             />
           </div>

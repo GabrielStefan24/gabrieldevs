@@ -62,7 +62,7 @@ const Header = () => {
         <div
           ref={menu}
           className={`${styles.menu} ${styles.cross} ${styles["menu--1"]}`}
-          style={{ backgroundColor: !isActive ? "rgb(14, 14, 15)" : "#455CE9" }}
+          style={{ backgroundColor: !isActive ? "rgb(14, 14, 15)" : "#ec4e39" }}
         >
           <label className={styles.label}>
             <input

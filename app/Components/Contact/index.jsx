@@ -1,7 +1,19 @@
+"use client";
 import styles from "./styles.module.scss";
+import { useState } from "react";
 
-const Contact = () => {
-  return <div className={styles.test}>index</div>;
-};
+export default function Contact() {
+  const [isHovered, setIsHovered] = useState(false);
 
-export default Contact;
+  return (
+    <div className={styles.test}>
+      <h1
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        Test H1
+      </h1>
+      <p>{isHovered ? "Hovered" : "Not Hovered"}</p>
+    </div>
+  );
+}

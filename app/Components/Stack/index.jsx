@@ -1,11 +1,21 @@
+"use client";
 import styles from "./styles.module.scss";
 import { SVG1, SVG2, SVG3, SVG4, SVG5, SVG6, SVG7, SVG8, SVG9 } from "./icons";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 import React from "react";
 
 const Stack = () => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
+
   return (
-    <section className={styles.container}>
+    <section ref={container} className={styles.container}>
       <div className={styles.h3Container}>
         <h3 className={styles.h3}>Stack</h3>
       </div>
@@ -47,6 +57,9 @@ const Stack = () => {
           <p>Tailwind CSS</p>
         </div>
       </div>
+      <motion.div style={{ height }} className={styles.circleContainer}>
+        <div className={styles.circle}></div>
+      </motion.div>
     </section>
   );
 };
