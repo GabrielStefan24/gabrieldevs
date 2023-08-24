@@ -23,7 +23,7 @@ export default function Home() {
     })();
   }, []);
   return (
-    <main className={styles.main}>
+    <main className={styles.main} style={{ overflow: "hidden" }}>
       <Hero />
       <About />
       <Projects />

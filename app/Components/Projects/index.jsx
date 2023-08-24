@@ -10,22 +10,22 @@ import Rounded from "../../common/Rounded";
 const projects = [
   {
     title: "bf Tattoo Studio",
-    src: "HeroImage.webp",
+    src: "poza.jpg",
     color: "#000000",
   },
   {
     title: "Şape Clasice",
-    src: "HeroImage.webp",
+    src: "poza.jpg",
     color: "#8C8C8C",
   },
   {
     title: "Greek Gods",
-    src: "HeroImage.webp",
+    src: "poza.jpg",
     color: "#EFE8D3",
   },
   {
     title: "Ball Run",
-    src: "HeroImage.webp",
+    src: "poza.jpg",
     color: "#706D63",
   },
 ];

@@ -93,7 +93,7 @@
                 width: 140px;
                 height: 140px;
             }
-            @media(max-width:1024px){
+            @media(min-width:541) and (max-width:1024px){
                 width: 180px;
                 height: 180px;
             }
