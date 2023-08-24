@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Header = () => {
+const Menu = () => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const menu = useRef(null);
@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={styles.header}>
+      <div className={styles.Menu}>
         <div className={styles.navbar}>
           <div className={styles.el}>
             <p>Home</p>
@@ -96,4 +96,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Menu;

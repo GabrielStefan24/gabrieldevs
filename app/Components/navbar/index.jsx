@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Link from "./Link";
-import { slideMenu } from "../Header/variants";
+import { slideMenu } from "../Menu/variants";
 import Curve from "./Curve";
 import { usePathname } from "next/navigation";
 import { useState } from "react";

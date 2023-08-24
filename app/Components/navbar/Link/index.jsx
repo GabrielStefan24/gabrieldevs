@@ -3,7 +3,7 @@
 import styles from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { slideLink, scale } from "../../Header/variants";
+import { slideLink, scale } from "../../Menu/variants";
 
 const LinkItem = ({ data, isActive, setSelectedIndicator }) => {
   const { title, href, index } = data;
