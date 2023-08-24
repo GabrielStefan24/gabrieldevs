@@ -40,7 +40,7 @@ const Header = () => {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname, isActive]);
+  }, [pathname]);
 
   return (
     <>
@@ -89,7 +89,9 @@ const Header = () => {
           </label>
         </div>
       </div>
-      <AnimatePresence mode="wait">{isActive && <Navbar />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActive && <Navbar pathname={pathname} />}
+      </AnimatePresence>
     </>
   );
 };
