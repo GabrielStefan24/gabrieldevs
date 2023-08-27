@@ -5,23 +5,27 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { slideLink, scale } from "../../Menu/variants";
 import { useRouter } from "next/navigation";
-const LinkItem = ({ data, isActive, setSelectedIndicator }) => {
-  const router = useRouter();
+import { usePathname } from "next/navigation";
+
+const LinkItem = ({ data, isActive, setSelectedIndicator, setIsActive }) => {
   const { title, href, index } = data;
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleLinkClick = (e, href) => {
+    e.preventDefault();
+
     if (href === "#contact") {
-      e.preventDefault();
       const contactElement = document.getElementById("contact");
       if (contactElement) {
         contactElement.scrollIntoView({ behavior: "smooth" });
       }
-      if (router && router.asPath) {
-        router.replace(router.asPath.split("#")[0]);
-      }
-    } else if (href === "/") {
-      e.preventDefault();
-      window.scrollTo({ top: 350, behavior: "smooth" });
+    }
+    if (href === "/" && pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsActive(false);
+    } else {
+      router.push(href);
     }
   };
 

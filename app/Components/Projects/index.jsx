@@ -62,7 +62,7 @@ export default function Home() {
   let yMoveCursorLabel = useRef(null);
 
   useEffect(() => {
-    //Move Container
+  
     xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {
       duration: 0.8,
       ease: "power3",
@@ -71,7 +71,7 @@ export default function Home() {
       duration: 0.8,
       ease: "power3",
     });
-    //Move cursor
+
     xMoveCursor.current = gsap.quickTo(cursor.current, "left", {
       duration: 0.5,
       ease: "power3",
@@ -80,7 +80,7 @@ export default function Home() {
       duration: 0.5,
       ease: "power3",
     });
-    //Move cursor label
+   
     xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {
       duration: 0.45,
       ease: "power3",

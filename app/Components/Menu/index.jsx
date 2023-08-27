@@ -10,15 +10,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
 const Menu = () => {
+
+  const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname();
+  const menu = useRef(null);
+
   const handleContactClick = (e) => {
     e.preventDefault();
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
     history.replaceState(null, null, " ");
   };
-  const [isActive, setIsActive] = useState(false);
-  const pathname = usePathname();
-  const menu = useRef(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -47,7 +49,6 @@ const Menu = () => {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-    console.log(isActive, pathname);
   }, [pathname]);
 
   return (
@@ -55,19 +56,34 @@ const Menu = () => {
       <div className={styles.header}>
         <div className={styles.navbar}>
           <div className={styles.el}>
-            <Link href="/">Home</Link>
-            <div className={styles.indicator}></div>
+            <Link href="/" style={{ color: pathname !== "/" ? "black" : "" }}>
+              Home
+            </Link>
+            <div
+              className={styles.indicator}
+              style={{ backgroundColor: pathname !== "/" ? "black" : "" }}
+            ></div>
           </div>
           <div className={styles.el}>
-            <Link href="/work">Work</Link>
-            <div className={styles.indicator}></div>
+            <Link
+              href="/work"
+              style={{ color: pathname !== "/" ? "black" : "" }}
+            >
+              Work
+            </Link>
+            <div
+              className={styles.indicator}
+              style={{ backgroundColor: pathname !== "/" ? "black" : "" }}
+            ></div>
           </div>
-          <div className={styles.el} onClick={handleContactClick}>
-            <a href="#" onClick={(e) => e.preventDefault()}>
-              Contact
-            </a>
-            <div className={styles.indicator}></div>
-          </div>
+          {pathname === "/" && (
+            <div className={styles.el} onClick={handleContactClick}>
+              <a href="#" onClick={(e) => e.preventDefault()}>
+                Contact
+              </a>
+              <div className={styles.indicator}></div>
+            </div>
+          )}
         </div>
         <div
           ref={menu}
@@ -100,7 +116,7 @@ const Menu = () => {
         </div>
       </div>
       <AnimatePresence mode="wait">
-        {isActive && <Navbar pathname={pathname} />}
+        {isActive && <Navbar pathname={pathname} setIsActive={setIsActive} />}
       </AnimatePresence>
     </>
   );

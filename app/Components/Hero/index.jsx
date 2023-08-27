@@ -5,6 +5,7 @@ import { useState } from "react";
 import { slideUp, disperse } from "./variants";
 import { motion } from "framer-motion";
 import useMousePosition from "./useMousePosition";
+import { useRef } from "react";
 
 function GetChars({ children }) {
   const [isActive, setIsActive] = useState(true);
@@ -51,7 +52,7 @@ function GetChars({ children }) {
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
-
+  const home = useRef(null);
   const size = isHovered ? 400 : 40;
 
   return (
@@ -60,6 +61,7 @@ export default function Home() {
       initial="initial"
       animate="enter"
       className={styles.landing}
+      ref={home}
     >
       <div className={styles.lines}>
         <svg viewBox="0 0 1535 1440" fill="none" className={styles.rotating}>

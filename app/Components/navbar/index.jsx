@@ -22,9 +22,15 @@ const navLinks = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ setIsActive }) => {
   const pathname = usePathname();
+
   const [selectedIndicator, setSelectedIndicator] = useState(null);
+
+  const navLinksToShow = navLinks.filter((link) => {
+    if (link.title === "Contact" && pathname !== "/") return false;
+    return true;
+  });
 
   return (
     <motion.div
@@ -44,13 +50,14 @@ const Navbar = () => {
           <div className={styles.header}>
             <p>Navigation</p>
           </div>
-          {navLinks.map((el, index) => {
+          {navLinksToShow.map((el, index) => {
             return (
               <Link
-                data={{ ...el, index }}
+                data={{ ...el }}
                 key={index}
                 isActive={selectedIndicator === index}
                 setSelectedIndicator={setSelectedIndicator}
+                setIsActive={setIsActive}
               />
             );
           })}
