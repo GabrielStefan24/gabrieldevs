@@ -16,7 +16,7 @@ const Loader = () => {
       },
       index == 0 ? 400 : 320
     );
-  }, []);
+  }, [index]);
   return (
     <motion.section
       variants={slideUp}
