@@ -57,7 +57,7 @@ const projects = [
   },
 ];
 
-const index = () => {
+const Work = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   const [filter, setfilter] = useState("All");
@@ -86,4 +86,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Work;
