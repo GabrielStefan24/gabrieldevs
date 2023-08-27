@@ -6,7 +6,7 @@
     color: #afa18f;
     top: 0;
     max-width: 100vw;
-    z-index: 2;
+    z-index: 4;
     .container{
         box-sizing: border-box;
         padding: 15vh 7.5vw 10vh 7.5vw;
@@ -25,6 +25,7 @@
     .nav{
         display: flex;
         flex-direction: column;
+        width: 100%;
         font-size: clamp(2.5rem,6vw,4rem);
         margin-top: 2rem;
         gap: 1rem;

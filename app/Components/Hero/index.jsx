@@ -208,10 +208,10 @@ export default function Home() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            Every <span className={styles.nameMask}>day&apos;s a coding</span>
+            Every <span className={styles.nameMask}>day&apos;s a coding </span>
             journey,
             <br />
-            making the web a more engaging, useful <br /> place
+            making the web a more engaging, and <br /> useful place
           </h1>
         </motion.div>
       </div>

@@ -71,8 +71,18 @@
     }
     .btn{
         margin: 0 auto;
-        
-       
+    
+        a{
+            text-decoration: none;
+            color: #626363;
+            z-index: 4;
+            display: block;
+            padding: 15px 60px 15px 60px;
+            &:hover{
+                color: white;
+            }
+    }
+     
     }
   
     

@@ -5,7 +5,7 @@ import Rounded from '../../common/Rounded'
 
 export default function Contact() {
   return (
-    <section className={styles.footer}>
+    <section className={styles.footer} id="contact">
       <div className={styles.container}>
         <div className={styles.hello}>
           <h3 className={styles.h3}>
@@ -33,7 +33,12 @@ export default function Contact() {
         <div className={styles.socials}>
           <div className={styles.linkedin}>
             <Rounded backgroundColor={"#ec4e39"} className={styles.socialsBtn}>
-              <a href="mailto:sirbugabriel97@gmail.com">LinkedIn</a>
+              <a
+                href="https://www.linkedin.com/in/gabriel-s-94a908236/"
+                target="_blanc"
+              >
+                LinkedIn
+              </a>
             </Rounded>
           </div>
           <div className={styles.number}>

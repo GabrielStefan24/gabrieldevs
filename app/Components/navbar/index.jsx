@@ -18,14 +18,14 @@ const navLinks = [
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-  console.log(pathname);
+  const [selectedIndicator, setSelectedIndicator] = useState(null);
+
   return (
     <motion.div
       variants={slideMenu}
@@ -49,7 +49,7 @@ const Navbar = () => {
               <Link
                 data={{ ...el, index }}
                 key={index}
-                isActive={selectedIndicator == el.href}
+                isActive={selectedIndicator === index}
                 setSelectedIndicator={setSelectedIndicator}
               />
             );

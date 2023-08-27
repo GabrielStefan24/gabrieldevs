@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
+import Link from "next/link";
 
 const projects = [
   {
@@ -124,7 +125,7 @@ export default function Home() {
       </div>
       <div className={styles.btn}>
         <Rounded>
-          <p>More work</p>
+          <Link href="/work">More work</Link>
         </Rounded>
       </div>
       <>

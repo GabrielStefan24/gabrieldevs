@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 
 import Stack from "./Components/Stack";
 import Contact from "./Components/Contact";
+import Loader from "./Components/Loading";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,13 +19,14 @@ export default function Home() {
 
       setTimeout(() => {
         setIsLoading(false);
-        document.body.style.cursor = "default";
         window.scrollTo(0, 0);
       }, 2000);
     })();
   }, []);
   return (
     <main className={styles.main} style={{ overflow: "hidden" }}>
+      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
+
       <Hero />
       <About />
       <Projects />

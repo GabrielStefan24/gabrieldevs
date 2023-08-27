@@ -1,6 +1,9 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+"use client";
+
+import "./globals.css";
+import { Inter } from "next/font/google";
 import Menu from "./Components/Menu";
+import Contact from "./Components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 

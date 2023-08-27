@@ -7,8 +7,15 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 const Menu = () => {
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+
+    history.replaceState(null, null, " ");
+  };
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const menu = useRef(null);
@@ -40,22 +47,25 @@ const Menu = () => {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
+    console.log(isActive, pathname);
   }, [pathname]);
 
   return (
     <>
-      <div className={styles.Menu}>
+      <div className={styles.header}>
         <div className={styles.navbar}>
           <div className={styles.el}>
-            <p>Home</p>
+            <Link href="/">Home</Link>
             <div className={styles.indicator}></div>
           </div>
           <div className={styles.el}>
-            <p>Work</p>
+            <Link href="/work">Work</Link>
             <div className={styles.indicator}></div>
           </div>
-          <div className={styles.el}>
-            <p>Contact</p>
+          <div className={styles.el} onClick={handleContactClick}>
+            <a href="#" onClick={(e) => e.preventDefault()}>
+              Contact
+            </a>
             <div className={styles.indicator}></div>
           </div>
         </div>
