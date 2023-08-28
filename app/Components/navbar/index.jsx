@@ -50,12 +50,12 @@ const Navbar = ({ setIsActive }) => {
           <div className={styles.header}>
             <p>Navigation</p>
           </div>
-          {navLinksToShow.map((el, index) => {
+          {navLinksToShow.map((data, index) => {
             return (
               <Link
-                data={{ ...el }}
+                data={{ ...data, index }}
                 key={index}
-                isActive={selectedIndicator === index}
+                isActive={selectedIndicator === data.href}
                 setSelectedIndicator={setSelectedIndicator}
                 setIsActive={setIsActive}
               />

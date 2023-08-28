@@ -19,7 +19,7 @@ const Menu = () => {
     e.preventDefault();
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
-    history.replaceState(null, null, " ");
+    window.history.replaceState(null, null, " ");
   };
 
   useLayoutEffect(() => {
@@ -78,9 +78,7 @@ const Menu = () => {
           </div>
           {pathname === "/" && (
             <div className={styles.el} onClick={handleContactClick}>
-              <a href="#" onClick={(e) => e.preventDefault()}>
-                Contact
-              </a>
+              <a href="">Contact</a>
               <div className={styles.indicator}></div>
             </div>
           )}

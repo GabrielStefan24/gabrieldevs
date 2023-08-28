@@ -66,8 +66,8 @@ const Work = () => {
     <>
       <section className={styles.container}>
         <h1>
-          <span>Some of my work and </span>
-          <span> personal projects</span>
+          <span>Some of my work </span>
+          <span>and projects</span>
         </h1>
         <div className={styles.buttons}>
           <Rounded>

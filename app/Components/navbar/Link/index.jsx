@@ -15,15 +15,13 @@ const LinkItem = ({ data, isActive, setSelectedIndicator, setIsActive }) => {
   const handleLinkClick = (e, href) => {
     e.preventDefault();
 
-    if (href === "#contact") {
-      const contactElement = document.getElementById("contact");
-      if (contactElement) {
-        contactElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
     if (href === "/" && pathname === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       setIsActive(false);
+    } else if (href === "#contact" && pathname === "/") {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      setIsActive(false);
+      history.replaceState(null, null, window.location.pathname);
     } else {
       router.push(href);
     }
@@ -34,7 +32,7 @@ const LinkItem = ({ data, isActive, setSelectedIndicator, setIsActive }) => {
       custom={data.index}
       variants={slideLink}
       onMouseEnter={() => {
-        setSelectedIndicator(index);
+        setSelectedIndicator(data.href);
       }}
       className={styles.link}
       animate="enter"
