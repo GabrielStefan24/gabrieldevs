@@ -1,56 +1,63 @@
 "use client";
 import styles from "./styles.module.scss";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
 import Rounded from "../common/Rounded";
+import ProjectCard from "../Components/ProjectCard";
 
 const projects = [
   {
-    title: "bf Tattoo ",
+    title1: "bf  ",
+    title2: "Tattoo ",
     src: "poza.jpg",
     color: "#000000",
     identifier: "work",
   },
   {
-    title: "Şape Clasice",
+    title1: "Şape ",
+    title2: "Clasice",
     src: "poza.jpg",
     color: "#8C8C8C",
     identifier: "work",
   },
   {
-    title: "Greek Gods",
+    title1: "Greek",
+    title2: "Gods",
     src: "poza.jpg",
     color: "#EFE8D3",
     identifier: "project",
   },
   {
-    title: "Ball Run",
+    title1: "Ball ",
+    title2: "Run",
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
   },
   {
-    title: "Pokedex",
+    title1: "Poke",
+    title2: "dex",
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
   },
   {
-    title: "Tic Tac Toe",
+    title1: "Tic Tac",
+    title2: "Toe",
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
   },
   {
-    title: "Planet Facts",
+    title1: "Planet ",
+    title2: "Facts",
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
   },
   {
-    title: "Cartoon Network",
+    title1: "Cartoon",
+    title2: "Network",
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
@@ -58,8 +65,6 @@ const projects = [
 ];
 
 const Work = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
-
   const [filter, setfilter] = useState("All");
 
   return (
@@ -70,20 +75,37 @@ const Work = () => {
           <span>and projects</span>
         </h1>
         <div className={styles.buttons}>
-          <Rounded>
+          <Rounded onClick={() => setfilter("All")} isActive={filter === "All"}>
             <p>All</p>
           </Rounded>
-          <Rounded>
+          <Rounded
+            onClick={() => setfilter("work")}
+            isActive={filter === "work"}
+          >
             <p>Work</p>
           </Rounded>
-          <Rounded>
+          <Rounded
+            onClick={() => setfilter("project")}
+            isActive={filter === "project"}
+          >
             <p>Projects</p>
           </Rounded>
         </div>
+        <div className={styles.projectContainer}>
+          {projects
+            .filter((project) => {
+              if (filter === "All") return true;
+              return project.identifier === filter;
+            })
+            .map((project) => {
+              return <ProjectCard key={project.title1} project={project} />;
+            })}
+        </div>
       </section>
-      <div className={styles.test}>t</div>
+      <div className={styles.test}></div>
     </>
   );
 };
+
 
 export default Work;
