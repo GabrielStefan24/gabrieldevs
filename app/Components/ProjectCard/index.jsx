@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
-import open from "./variants";
+import openProject from "./variants";
 import { useState } from "react";
 
 const ProjectCard = ({ project }) => {
@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
     >
       <p>{title1}</p>
       <motion.div
-        variants={open}
+        variants={openProject}
         animate={isActive ? "open" : "closed"}
         className={styles.imgContainer}
       >
