@@ -2,52 +2,12 @@
 
 import styles from "./style.module.scss";
 import { useState } from "react";
-import { slideUp, disperse } from "./variants";
+import { slideUp } from "./variants";
 import { motion } from "framer-motion";
 import useMousePosition from "./useMousePosition";
 import { useRef } from "react";
 
-function GetChars({ children }) {
-  const [isActive, setIsActive] = useState(true);
 
-  const splitWord = (element) => {
-    let chars = [];
-    const word = element.props.children;
-    word.split("").forEach((char, i) => {
-      chars.push(
-        <motion.span
-          custom={i}
-          animate={isActive ? "open" : "closed"}
-          key={char + i}
-          variants={disperse}
-        >
-          {char}
-        </motion.span>
-      );
-    });
-    return chars;
-  };
-  const rotate = () => {
-    setIsActive(false);
-  };
-  const rotateBack = () => {
-    setIsActive(true);
-  };
-  console.log(isActive);
-  return (
-    <div
-      style={{ cursor: "pointer" }}
-      onMouseEnter={() => {
-        rotate();
-      }}
-      onMouseLeave={() => {
-        rotateBack();
-      }}
-    >
-      {splitWord(children)}
-    </div>
-  );
-}
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);

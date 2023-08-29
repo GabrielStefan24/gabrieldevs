@@ -7,24 +7,29 @@ import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/Rounded";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const projects = [
   {
-    title: "bf Tattoo Studio",
+    url: "bfTattoo",
+    title: "bf Tattoo ",
     src: "poza.jpg",
     color: "#000000",
   },
   {
+    url: "SapeClasice",
     title: "Şape Clasice",
     src: "poza.jpg",
     color: "#8C8C8C",
   },
   {
+    url: "GreekGods",
     title: "Greek Gods",
     src: "poza.jpg",
     color: "#EFE8D3",
   },
   {
+    url: "BallRun",
     title: "Ball Run",
     src: "poza.jpg",
     color: "#706D63",
@@ -53,7 +58,7 @@ export default function Home() {
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
-
+  const router = useRouter();
   let xMoveContainer = useRef(null);
   let yMoveContainer = useRef(null);
   let xMoveCursor = useRef(null);
@@ -62,7 +67,6 @@ export default function Home() {
   let yMoveCursorLabel = useRef(null);
 
   useEffect(() => {
-  
     xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {
       duration: 0.8,
       ease: "power3",
@@ -80,7 +84,7 @@ export default function Home() {
       duration: 0.5,
       ease: "power3",
     });
-   
+
     xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {
       duration: 0.45,
       ease: "power3",
@@ -104,6 +108,14 @@ export default function Home() {
     setModal({ active, index });
   };
 
+  const handleProjectClick = async (url) => {
+    try {
+      await router.push(`/work/${url}`);
+    } catch (error) {
+      console.error("Navigation failed:", error);
+    }
+  };
+
   return (
     <section
       onMouseMove={(e) => {
@@ -115,6 +127,7 @@ export default function Home() {
         {projects.map((project, index) => {
           return (
             <Project
+              onClick={() => handleProjectClick(project.url)}
               index={index}
               title={project.title}
               manageModal={manageModal}

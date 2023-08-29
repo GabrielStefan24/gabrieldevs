@@ -2,7 +2,7 @@
 
 import styles from "./styles.module.scss";
 
-export default function Project({ index, title, manageModal }) {
+export default function Project({ index, title, manageModal, onClick }) {
   return (
     <div
       onMouseEnter={(e) => {
@@ -12,6 +12,7 @@ export default function Project({ index, title, manageModal }) {
         manageModal(false, index, e.clientX, e.clientY);
       }}
       className={styles.project}
+      onClick={onClick}
     >
       <h2>{title}</h2>
       <p>More Details</p>

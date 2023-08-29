@@ -11,7 +11,7 @@ export default function Rounded({
   ...attributes
 }) {
   const activeFilter = {
-    backgroundColor: "#1C1D20",
+    backgroundColor: "#455CE9",
     color: "white",
   };
   const buttonStyle = isActive ? activeFilter : {};
