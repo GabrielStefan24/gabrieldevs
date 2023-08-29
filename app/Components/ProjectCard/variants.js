@@ -1,4 +1,4 @@
-export default openProject = {
+export const openProject = {
   initial: { width: 0 },
   open: {
     width: "auto",

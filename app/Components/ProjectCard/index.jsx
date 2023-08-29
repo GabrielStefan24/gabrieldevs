@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
-import openProject from "./variants";
+import { openProject } from "./variants";
 import { useState } from "react";
 
 const ProjectCard = ({ project }) => {
