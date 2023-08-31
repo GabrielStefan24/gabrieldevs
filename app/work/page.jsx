@@ -1,19 +1,34 @@
 "use client";
 import styles from "./styles.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Rounded from "../common/Rounded";
 import ProjectCard from "../Components/ProjectCard";
 import { projectsData } from "./data";
-import { motion } from "framer-motion";
-import variants from "./variants";
+import { AnimatePresence, motion } from "framer-motion";
+import Preloader from "./index";
+import { slidePage } from "./variants";
 
 const Work = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [filter, setfilter] = useState("All");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      scrollTo(0, 0);
+    }, 1);
+  }, []);
 
   return (
     <>
-      <motion.section className={styles.container}>
+      <AnimatePresence>{isLoading && <Preloader />}</AnimatePresence>
+      <motion.section
+        className={styles.container}
+        variants={slidePage}
+        initial="initial"
+        animate="enter"
+      >
         <h1>
           <span>Some of my work </span>
           <span>and projects</span>
@@ -35,22 +50,22 @@ const Work = () => {
             <p>Projects</p>
           </Rounded>
         </div>
-        <div className={styles.projectContainer}>
-          {projectsData
-            .filter((project) => {
-              if (filter === "All") return true;
-              return project.identifier === filter;
-            })
-            .map((project) => {
-              return (
-                <Link href={`/work/${project.title}`} key={project.title1}>
-                  <ProjectCard project={project} />
-                </Link>
-              );
-            })}
-        </div>
       </motion.section>
-      <div className={styles.test}></div>
+      <motion.section
+        className={styles.projectContainer}
+        variants={slidePage}
+        initial="initial"
+        animate="enter"
+      >
+        {projectsData
+          .filter((project) => {
+            if (filter === "All") return true;
+            return project.identifier === filter;
+          })
+          .map((project) => {
+            return <ProjectCard project={project} key={project.title} />;
+          })}
+      </motion.section>
     </>
   );
 };
