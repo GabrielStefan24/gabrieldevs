@@ -80,11 +80,14 @@
   display: flex;
   position: absolute;
   gap: 2vw;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   justify-content: flex-end;
   width: 100%;
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  @media(max-width:620px){
+    padding: 1rem 1rem;
+  }
 }
 .el{
   position: relative;

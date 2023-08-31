@@ -5,7 +5,7 @@ export const slideUp = {
 
   exit: {
     y: "-100vh",
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.2 },
   },
 };
 export const slidePage = {
@@ -15,7 +15,7 @@ export const slidePage = {
 
   enter: {
     y: "0",
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.5 },
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 0.2 },
   },
 };
   

@@ -17,7 +17,7 @@ const Work = () => {
     setTimeout(() => {
       setIsLoading(false);
       scrollTo(0, 0);
-    }, 1);
+    }, 0.8);
   }, []);
 
   return (
@@ -57,14 +57,19 @@ const Work = () => {
         initial="initial"
         animate="enter"
       >
-        {projectsData
-          .filter((project) => {
-            if (filter === "All") return true;
-            return project.identifier === filter;
-          })
-          .map((project) => {
-            return <ProjectCard project={project} key={project.title} />;
-          })}
+        <AnimatePresence mode="wait">
+          {projectsData
+            .filter((project) => {
+              if (filter === "All") return true;
+              return project.identifier === filter;
+            })
+            .map((project, index) => {
+              console.log(index);
+              return (
+                <ProjectCard project={project} key={project.id} index={index} />
+              );
+            })}
+        </AnimatePresence>
       </motion.section>
     </>
   );

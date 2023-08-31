@@ -6,6 +6,7 @@ export const projectsData = [
     color: "#000000",
     identifier: "work",
     contribution: "Development",
+    id: 1,
   },
   {
     title: "SapeClasice",
@@ -14,6 +15,7 @@ export const projectsData = [
     color: "#8C8C8C",
     identifier: "work",
     contribution: "Design & Development",
+    id: 2,
   },
   {
     title: "GreekGods",
@@ -22,6 +24,7 @@ export const projectsData = [
     color: "#EFE8D3",
     identifier: "project",
     contribution: "Design & Development",
+    id: 3,
   },
   {
     title: "BallRun",
@@ -30,6 +33,7 @@ export const projectsData = [
     color: "#706D63",
     identifier: "project",
     contribution: "Bruno Simon course",
+    id: 4,
   },
   {
     title: "Pokedex",
@@ -38,6 +42,7 @@ export const projectsData = [
     color: "#706D63",
     identifier: "project",
     contribution: "Design & Development",
+    id: 5,
   },
   {
     title: "TicTacToe",
@@ -46,11 +51,13 @@ export const projectsData = [
     color: "#706D63",
     identifier: "project",
     contribution: "Development",
+    id: 6,
   },
   {
     title: "PlanetFacts",
     titleFull: "Planet Facts ",
 
+    id: 7,
     src: "poza.jpg",
     color: "#706D63",
     identifier: "project",
@@ -63,5 +70,6 @@ export const projectsData = [
     color: "#706D63",
     identifier: "project",
     contribution: "Development",
+    id: 8,
   },
 ];
