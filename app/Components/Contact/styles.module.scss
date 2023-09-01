@@ -45,6 +45,10 @@
             color: white;
             font-weight: 400;
             font-size: clamp(3rem,8vw,8rem);
+
+            .waveEmoji{
+                animation: wave 3s ease-in-out infinite;
+            }
             @media(max-width:300px){
                 font-size: 2rem;
             }
@@ -131,10 +135,34 @@
            color: white;
            text-decoration: none; 
            z-index: 2;
-           font-size: clamp(1rem,1.5vw,1.5rem);
-           font-weight: 200;
+           font-size: clamp(0.8rem,1.5vw,1.3rem);
+           font-weight: 600;
          
         }
     }
   
 }
+@keyframes wave {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    5% {
+      transform: rotate(-8deg);
+    }
+    8% {
+      transform: rotate(8deg);
+    }
+    15% {
+      transform: rotate(-8deg);
+    }
+    20% {
+      transform: rotate(8deg);
+    }
+    25% {
+      transform: rotate(0deg);
+    }
+    26%,
+    100% {
+      transform: rotate(0deg);
+    }
+  }

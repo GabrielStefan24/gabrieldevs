@@ -16,7 +16,7 @@ export default function Contact() {
               height={1080}
               alt="Picture of me"
             />
-            Say hi 👋
+            Say hi <span className={styles.waveEmoji}>👋</span>
           </h3>
         </div>
         <div className={styles.buttonRow}>

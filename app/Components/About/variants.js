@@ -3,11 +3,13 @@ import { delay } from "framer-motion";
 export const opacity = {
   initial: {
     opacity: 0,
+    y: 80,
   },
 
   open: {
     opacity: 1,
-    transition: { duration: 2.5 },
+    transition: { duration: 1, ease: [0.45, 0.05, 0.55, 0.95] },
+    y: 0,
   },
   closed: {
     opacity: 0,

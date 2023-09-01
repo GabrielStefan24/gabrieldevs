@@ -64,7 +64,6 @@ const Work = () => {
               return project.identifier === filter;
             })
             .map((project, index) => {
-              console.log(index);
               return (
                 <ProjectCard project={project} key={project.id} index={index} />
               );

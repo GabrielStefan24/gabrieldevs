@@ -12,9 +12,21 @@
     padding: 0;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
+    background-color: rgb(238, 238, 238);
    
   
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 :root{
   --vh: 9.31px;
